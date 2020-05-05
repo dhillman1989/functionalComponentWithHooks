@@ -3,12 +3,12 @@ import React, { createContext, useState } from "react";
 export const LanguageContext = createContext();
 
 export function LanguageProvider(props) {
-  const [language, setLanguage] = useState("english");
+  const [language, changeLanguage] = useState("english");
 
-  const changeLanguage = (e) => setLanguage(e.target.value);
+  const setLanguage = (e) => changeLanguage(e.target.value);
 
   return (
-    <LanguageContext.Provider value={{ language, changeLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
       {props.children}
     </LanguageContext.Provider>
   );
