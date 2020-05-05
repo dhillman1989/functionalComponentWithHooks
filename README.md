@@ -1,2 +1,0 @@
-# functionalComponentWithHooks
-Created with CodeSandbox
